@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wildfire-dashboard/static/css/main.9856f5fe.css",
+    "main.js": "/wildfire-dashboard/static/js/main.98a37e19.js",
+    "static/js/453.670e15c7.chunk.js": "/wildfire-dashboard/static/js/453.670e15c7.chunk.js",
+    "index.html": "/wildfire-dashboard/index.html",
+    "main.9856f5fe.css.map": "/wildfire-dashboard/static/css/main.9856f5fe.css.map",
+    "main.98a37e19.js.map": "/wildfire-dashboard/static/js/main.98a37e19.js.map",
+    "453.670e15c7.chunk.js.map": "/wildfire-dashboard/static/js/453.670e15c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9856f5fe.css",
+    "static/js/main.98a37e19.js"
+  ]
+}
