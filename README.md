@@ -38,6 +38,5 @@ git clone https://github.com/carol-tsai/wildfire-dashboard.git
 cd wildfire-dashboard/frontend
 npm install
 npm start
-
-
+```
 MIT License
