@@ -30,19 +30,6 @@ const App = () => {
             <FiresByYearChart />
           </div>
         </div>
-
-        {/* Row 2 */}
-        <div className="dashboard-row">
-          <div className="visualization-container">
-            <h2>Trends Over Time</h2>
-            <FireTrendsChart />
-          </div>
-          
-          <div className="visualization-container">
-            <h2>Causes Breakdown</h2>
-            <FireCausesPieChart />
-          </div>
-        </div>
       </div>
     </div>
   );
