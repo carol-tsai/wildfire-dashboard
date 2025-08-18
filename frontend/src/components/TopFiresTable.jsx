@@ -9,7 +9,7 @@ const TopFiresTable = () => {
 
   // 🔹 Fetch distinct years for the dropdown
   useEffect(() => {
-    fetch("https://<your-api-id>.execute-api.us-east-2.amazonaws.com/dev/fire-years")
+    fetch("https://xlgjrlpuv8.execute-api.us-east-2.amazonaws.com/stage1/largest-fires")
       .then(res => res.json())
       .then(data => setYears(data.years || [])) // expecting { years: [2000, 2001, ...] }
       .catch(err => console.error("Error fetching years:", err));
@@ -17,7 +17,7 @@ const TopFiresTable = () => {
 
   // 🔹 Fetch fires when year changes
   useEffect(() => {
-    let url = "https://<your-api-id>.execute-api.us-east-2.amazonaws.com/dev/top-fires";
+    let url = "https://xlgjrlpuv8.execute-api.us-east-2.amazonaws.com/stage1/largest-fires";
     if (year) {
       url += `?year=${year}`;
     }
