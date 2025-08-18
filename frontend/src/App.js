@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
+import TopFiresTable from "components/TopFiresTable";
 
 function App() {
   const [data, setData] = useState([]);
@@ -43,6 +44,7 @@ function App() {
           <Bar dataKey="total_fires" fill="#ff5722" />
         </BarChart>
       )}
+      <TopFiresTable/>
     </div>
   );
 }
