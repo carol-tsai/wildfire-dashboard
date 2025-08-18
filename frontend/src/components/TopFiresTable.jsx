@@ -33,7 +33,7 @@ const TopFiresTable = () => {
   }, [selectedYear]);
 
   // Years we want to show in the dropdown (2020-2024)
-  const filteredYears = ['2024', '2023', '2022', '2021', '2020'];
+  const filteredYears = ['2024', '2023', '2022', '2021', '2020','2019','2018','2017','2016','2015'];
 
   const handleYearChange = (e) => {
     setSelectedYear(e.target.value);
@@ -44,7 +44,6 @@ const TopFiresTable = () => {
 
   return (
     <div>
-      <h1>Top 20 Largest Fires</h1>
       <div>
         <label htmlFor="year-select">Filter by Year: </label>
         <select 
@@ -65,7 +64,6 @@ const TopFiresTable = () => {
             <th>Size (Acres)</th>
             <th>Year</th>
             <th>Cause</th>
-            <th>Name</th>
           </tr>
         </thead>
         <tbody>
@@ -74,7 +72,6 @@ const TopFiresTable = () => {
               <td>{fire.size_acres.toLocaleString()}</td>
               <td>{fire.fireyear}</td>
               <td>{fire.statcause}</td>
-              <td>{fire.firename || 'N/A'}</td>
             </tr>
           ))}
         </tbody>

@@ -1,53 +1,52 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from "recharts";
-import TopFiresTable from "./components/TopFiresTable";
+import React from 'react';
+import './App.css'; // Make sure to create this CSS file
+import TopFiresTable from './components/TopFiresTable';
+import FiresByYearChart from './components/FiresByYearChart';
 
-function App() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+// Placeholder components - replace these with your actual visualization components
+const FireDataTable = () => <div className="visualization-box">Fire Data Table Component</div>;
+const FireMapVisualization = () => <div className="visualization-box">Fire Map Visualization</div>;
+const FireTrendsChart = () => <div className="visualization-box">Fire Trends Over Time</div>;
+const FireCausesPieChart = () => <div className="visualization-box">Fire Causes Breakdown</div>;
 
-  // Replace this with your API Gateway endpoint
-  const API_URL = "https://xlgjrlpuv8.execute-api.us-east-2.amazonaws.com/stage1/fires-by-year";
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get(API_URL);
-        // Assuming Lambda returns { year: "2020", fire_count: 123 }
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
-
+const App = () => {
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h1>Wildfire Dashboard</h1>
-      {loading ? (
-        <p>Loading data...</p>
-      ) : (
-        <BarChart
-          width={600}
-          height={400}
-          data={data}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="fireyear" />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey="total_fires" fill="#ff5722" />
-        </BarChart>
-      )}
-      <TopFiresTable/>
+    <div className="app">
+      <header className="app-header">
+        <h1>Wildfire Dashboard</h1>
+        <p className="subtitle">Tracking and analyzing wildfire data</p>
+      </header>
+
+      <div className="dashboard-container">
+        {/* Row 1 */}
+        <div className="dashboard-row">
+          <div className="visualization-container">
+            <h2>Top 20 Largest Fires</h2>
+            <TopFiresTable />
+          </div>
+          
+          <div className="visualization-container">
+            <h2>Fires By Year</h2>
+            <FiresByYearChart />
+          </div>
+        </div>
+
+        {/* Row 2 */}
+        <div className="dashboard-row">
+          <div className="visualization-container">
+            <h2>Trends Over Time</h2>
+            <FireTrendsChart />
+          </div>
+          
+          <div className="visualization-container">
+            <h2>Causes Breakdown</h2>
+            <FireCausesPieChart />
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
 
