@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './TopFiresTable.css'; // We'll create this CSS file
+import './TopFiresTable.css'; 
 
 const TopFiresTable = () => {
   const [fireData, setFireData] = useState([]);
