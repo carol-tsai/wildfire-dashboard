@@ -4,7 +4,7 @@
 
 An interactive dashboard visualizing wildfire data across the United States, featuring historical trends and top fire incidents.
 
-![Dashboard Screenshot](./screenshot.png)  
+![Dashboard Screenshot](./assets/screenshot.png)  
 
 ## Features
 
@@ -25,6 +25,8 @@ Experience the dashboard:
 - AWS S3 
 - AWS Athena 
 - AWS Lambda 
+
+![Architecture Diagram](./assets/architecture-diagram.png)  
 
 ## Data Source
 [National USFS Fire Occurrence Point (Feature Layer)] (https://catalog.data.gov/dataset/national-usfs-fire-occurrence-point-feature-layer-d3233)
