@@ -50,38 +50,6 @@ const FiresByYearChart = () => {
           borderWidth: 1,
           hoverBackgroundColor: 'rgba(235, 107, 86, 1)',
         }]
-      },
-      options: {
-        responsive: false,
-        maintainAspectRatio: false,
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: 'Number of Fires' }
-          },
-          x: {
-            title: { display: true, text: 'Year' },
-            ticks: {
-              autoSkip: true,
-              maxTicksLimit: 20,
-              maxRotation: 45,
-              minRotation: 45
-            },
-            grid: {
-              display: false
-            }
-          }
-        },
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: (context) => `Fires: ${context.raw.toLocaleString()}`
-            }
-          },
-          legend: { display: true, position: 'top' }
-        },
-        barPercentage: 0.6,
-        categoryPercentage: 0.8
       }
     });
 
@@ -100,11 +68,6 @@ const FiresByYearChart = () => {
       <div className="chart-wrapper">
         <canvas 
           ref={chartRef} 
-          style={{
-            width: '100%',
-            height: '400px',
-            minHeight: '400px'
-          }}
         />
       </div>
     </div>
