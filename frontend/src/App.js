@@ -21,7 +21,6 @@ const App = () => {
         {/* Row 1 */}
         <div className="dashboard-row">
           <div className="visualization-container">
-            <h2>Top 20 Largest Fires</h2>
             <TopFiresTable />
           </div>
           
